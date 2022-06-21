@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 1</title>
+  </head>
+  <body>
+    <p>&#169; some text</p>
+    <section id="section-1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius commodi ad doloribus numquam
+      tempore nemo soluta fugit repellendus et, culpa suscipit ducimus perferendis voluptatem
+      corrupti veniam vel voluptas deserunt rem.
+
+      <h1>Эффективные решения для вашего бизнеса</h1>
+    </section>
+    Hello world!
+    <h1 title="Wonderful title)))">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quisquam ut quia amet
+      voluptates nesciunt. Ut, obcaecati expedita. Sint tempore, cum sapiente excepturi id quos? In
+      molestiae consequuntur velit dolorum.
+    </h1>
+    <h2>Внимание к деталям</h2>
+    <div style="display: flex">
+      <div>
+        <!-- абсолютний шлях до файлу -->
+        <img
+          style="outline: 2px solid red; margin-right: 20px"
+          src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+          alt="Funny cat"
+          width="300"
+          height="400"
+        />
+      </div>
+      <div>
+        <!-- відносний шлях до файлу - пишеться відносно того файлу в якому знаходимось -->
+        <img
+          style="outline: 2px solid blueviolet"
+          src="./images/cat.avif"
+          alt="Funny cat on blue background"
+          width="300"
+        />
+      </div>
+    </div>
+    <input type="text" />
+    <button></button>
+    <h1 lang="uk">Слава Україні!)</h1>
+    <ul>
+      <li>
+        <a href="">link 1</a>
+      </li>
+      <li>
+        <a href="">link 2</a>
+      </li>
+      <li>
+        <a href="">link 3</a>
+      </li>
+      <li>
+        <a href="">link 4</a>
+      </li>
+    </ul>
+
+    <!-- Розмітка тексту -->
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque expedita voluptatem, odit
+      maiores nam animi! Nisi quaerat accusamus iste, inventore sit dolorem earum fugiat eveniet
+      nulla alias non, laudantium laborum.
+    </p>
+    <!-- Бажано використовувати один раз на одній сторінці -->
+    <h1>Heading 1</h1>
+    <!-- Дуже важливо притримуватися ієрархії загловків -->
+    <h2>Heading 2</h2>
+
+    <!-- в середині списку може бути елемент списку -->
+    <ul>
+      <li>list item</li>
+      <li>list item</li>
+      <li>list item</li>
+      <li>
+        <ul>
+          <li>
+            <ul>
+              <li></li>
+            </ul>
+          </li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ol>
+      <li></li>
+    </ol>
+
+    <dl>
+      <dt></dt>
+      <dd></dd>
+    </dl>
+
+    <!-- посилання переводить користувача на нову сторінку або на секцію м межах поточної сторінки -->
+    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
+    <a href="mailto:mymail@mail.com">mymail@mail.com</a>
+    <a href="tel:+380999999999">+38 099 999-99-99</a>
+    <a href="" download>download</a>
+    <a href="#section-1">item</a>
+
+    <!-- кнопка виконує певну дію на сторінці (відкриває модальне вікно, відправляє дані з форми, запускає анімацію) -->
+    <button type="button">Click me! ;)</button>
+
+    <!-- шапка сайту -->
+    <header>
+      <nav></nav>
+    </header>
+    <!-- унікальний контент сайту -->
+    <main>
+      <section>
+        <div>
+          <h1></h1>
+        </div>
+      </section>
+      <section>
+        <h2 hidden>Якщо це прихований підзаголовок, тоді використовуємо h2 і далі по ієрархії</h2>
+        <ul>
+          <li>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+          </li>
+          <li>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+          </li>
+          <li>
+            <h2>Lorem ipsum dolor sit amet.</h2>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- підвал сайту -->
+    <footer></footer>
+  </body>
+</html>
