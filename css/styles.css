@@ -1,0 +1,150 @@
+body {
+  font-family: sans-serif;
+  color: red;
+}
+
+/* p {
+  font-size: 20px;
+  color: lightblue;
+} */
+button {
+  background-color: blueviolet;
+}
+
+/**
+  |============================
+  | Common styles
+  |============================
+*/
+/* 100 */
+#link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(217, 117, 117);
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+/**
+  |============================
+  | Element styles
+  |============================
+*/
+/* 10 */
+.main-link {
+  color: blueviolet;
+  background-color: transparent;
+}
+.main-link:hover,
+.main-link:focus {
+  color: white;
+  background-color: blueviolet;
+}
+
+.main-link:active {
+  color: white;
+  background-color: hotpink;
+}
+
+.text {
+  color: darkred;
+}
+
+.text:hover {
+  color: lightgreen;
+}
+/* фокус на параграфі ніколи не спрацює */
+.text:focus {
+  color: lightgreen;
+}
+
+.btn {
+  color: white;
+  cursor: pointer;
+}
+.btn-large {
+  width: 200px;
+  height: 50px;
+}
+
+.price-list {
+  color: yellow;
+}
+
+.benefits-list {
+  color: tomato;
+}
+
+.news-list {
+  list-style: disc;
+  background-color: grey;
+  color: white;
+}
+
+#pop-up-btn {
+  font-size: 20px;
+}
+
+#modal-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+}
+
+[type='button'] {
+  letter-spacing: 0.1em;
+}
+
+.section-list .text {
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+/* .group > .text {
+  color: teal;
+} */
+
+/* .price-list .text {
+  color: red;
+} */
+
+/**
+  |============================
+  | about section
+  |============================
+*/
+/* .about {
+  color: inherit;
+} */
+/* .about-group {
+  color: inherit;
+} */
+/* .about-text {
+  color: inherit;
+} */
+/* .about-description {
+  color: inherit;
+} */
+/**
+  |============================
+  | team section
+  |============================
+*/
+/* .team {
+  color: inherit;
+}
+.team .title {
+  color: inherit;
+}
+.team .list {
+  color: inherit;
+}
+.team .item {
+  color: inherit;
+}
+.team .text {
+  color: inherit;
+} */

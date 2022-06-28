@@ -1,0 +1,25 @@
+/* 1 */
+a {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* 10 */
+.main-link {
+  color: blueviolet;
+  background-color: transparent;
+}
+/* 100 */
+#link {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  background-color: rgb(217, 117, 117);
+}
+
+/* final styles */
+element {
+  color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  text-decoration: none;
+  background-color: rgb(217, 117, 117);
+}
