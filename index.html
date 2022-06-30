@@ -5,11 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BarberShop</title>
+    <!-- Fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fonts end -->
+
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <!-- Header section -->
     <header class="header">
-      <a class="logo" href="">
+      <a class="logo link" href="">
         <img
           class="logo-img"
           src="./images/header/logo.png"
@@ -19,32 +29,32 @@
         />
       </a>
       <nav class="header-nav">
-        <ul class="header-list">
+        <ul class="header-list list">
           <li class="header-item">
-            <a class="header-link" href="#about">О нас</a>
+            <a class="header-link header-link-current link" href="#about">О нас</a>
           </li>
           <li class="header-item">
-            <a class="header-link" href="#price">Услуги и цены</a>
+            <a class="header-link link" href="#price">Услуги и цены</a>
           </li>
           <li class="header-item">
-            <a class="header-link" href="">Мастера</a>
+            <a class="header-link link" href="">Мастера</a>
           </li>
           <li class="header-item">
-            <a class="header-link" href="#contacts">Контакты</a>
+            <a class="header-link link" href="#contacts">Контакты</a>
           </li>
         </ul>
       </nav>
-      <a class="header-phone" href="tel:+380441111111">+38 044 111 11 11</a>
-      <button class="header-btn" type="button">онлайн-запись</button>
+      <a class="header-phone link" href="tel:+380441111111">+38 044 111 11 11</a>
+      <button class="header-btn btn btn-mode-dark" type="button">онлайн-запись</button>
     </header>
     <!-- Main section -->
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <ul class="hero-list">
+        <ul class="hero-list list">
           <li class="hero-item">
             <a
-              class="hero-link"
+              class="hero-link link"
               target="_blank"
               rel="noopener noreferrer"
               href="https://instagram.com"
@@ -53,7 +63,7 @@
           </li>
           <li class="hero-item">
             <a
-              class="hero-link"
+              class="hero-link link"
               target="_blank"
               rel="noopener noreferrer"
               href="https://yuotube.com"
@@ -61,7 +71,9 @@
             >
           </li>
         </ul>
-        <p class="hero-uppertitle" lang="en">A hair salon for men in Kyiv</p>
+        <p class="hero-uppertitle uppertitle uppertitle-mode-dark" lang="en">
+          A hair salon for men in Kyiv
+        </p>
         <h1 class="main-title" lang="en">BarberShop</h1>
         <p class="hero-desc">
           Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
@@ -71,7 +83,7 @@
           <div class="pagination-item"></div>
           <div class="pagination-item"></div>
         </div>
-        <ul class="slider-controls">
+        <ul class="slider-controls list">
           <li class="slider-item">
             <button class="slider-btn" type="button">Назад</button>
           </li>
@@ -82,10 +94,10 @@
       </section>
       <!-- About section -->
       <section class="about" id="about">
-        <ul class="about-list">
+        <ul class="about-list list">
           <li class="about-item">
             <img
-              class="aboit-img"
+              class="about-img"
               src="./images/about/img-1.jpg"
               alt="Бритье бороды"
               width="270"
@@ -94,7 +106,7 @@
           </li>
           <li class="about-item">
             <img
-              class="aboit-img"
+              class="about-img"
               src="./images/about/img-2.jpg"
               alt="Бритье опасной бритвой"
               width="270"
@@ -102,8 +114,8 @@
             />
           </li>
         </ul>
-        <p class="about-uppertitle">О НАС</p>
-        <h2 class="section-title">Лучший Барбершоп твоего города</h2>
+        <p class="about-uppertitle uppertitle uppertitle-mode-light">О НАС</p>
+        <h2 class="section-title section-title-mode-light">Лучший Барбершоп твоего города</h2>
         <h3 class="section-subtitle">
           Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
         </h3>
@@ -117,11 +129,13 @@
       </section>
       <!-- Price section -->
       <section class="price" id="price">
-        <p class="price-uppertitle">Проведи время в компании лучших мастеров</p>
-        <h2 class="section-title">Услуги и цены</h2>
-        <ul class="price-list">
+        <p class="price-uppertitle uppertitle uppertitle-mode-dark">
+          Проведи время в компании лучших мастеров
+        </p>
+        <h2 class="section-title section-title-mode-dark">Услуги и цены</h2>
+        <ul class="price-list list">
           <li class="price-item">
-            <ul class="price-inner-list">
+            <ul class="price-inner-list list">
               <li class="price-inner-item">Мужская стрижка от 300 грн.</li>
               <li class="price-inner-item">Стрижка бороды от 200 грн.</li>
               <li class="price-inner-item">Стрижка усов от 200 грн.</li>
@@ -129,7 +143,7 @@
             </ul>
           </li>
           <li class="price-item">
-            <ul class="price-inner-list">
+            <ul class="price-inner-list list">
               <li class="price-inner-item">Cтрижка у стажера от 50 грн.</li>
               <li class="price-inner-item">Стрижка под насадку от 200 грн.</li>
               <li class="price-inner-item">Детская стрижка (до 12 лет) от 300 грн.</li>
@@ -141,12 +155,14 @@
       </section>
       <!-- Portfolio section -->
       <section class="portfolio">
-        <p class="portfolio-uppertitle">На латинском языке “барба” означает “борода”</p>
+        <p class="portfolio-uppertitle uppertitle uppertitle-mode-dark">
+          На латинском языке “барба” означает “борода”
+        </p>
 
         <!-- Логічний підзаголовок, ховаємо за допомогою атрибуту hidden -->
         <h2 hidden>Портфолио работ</h2>
 
-        <ul class="portfolio-list">
+        <ul class="portfolio-list list">
           <li class="portfolio-item">
             <img src="./images/portfolio/gallery-1.jpg" alt="Изображение" class="portfolio-img" />
           </li>
@@ -179,12 +195,12 @@
           </form>
         </div>
         <div class="contacts-group">
-          <h2 class="section-title">Контакты</h2>
+          <h2 class="section-title section-title-mode-dark">Контакты</h2>
           <address class="contatcs-address">
-            <ul class="contacts-list">
+            <ul class="contacts-list list">
               <li class="contacts-item">
                 <a
-                  class="contacts-link"
+                  class="contacts-link link"
                   href="https://goo.gl/maps/46dUfQWJNFQiRmkx6"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -192,10 +208,12 @@
                 >
               </li>
               <li class="contacts-item">
-                <a class="contacts-link" href="tel:+380441111111">+38 044 111 11 11</a>
+                <a class="contacts-link link" href="tel:+380441111111">+38 044 111 11 11</a>
               </li>
               <li class="contacts-item">
-                <a class="contacts-link" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                <a class="contacts-link link" href="mailto:barbershop@email.com"
+                  >barbershop@email.com</a
+                >
               </li>
             </ul>
           </address>
@@ -210,10 +228,10 @@
     <!-- Footer section -->
     <footer class="footer">
       <p class="footer-copyright">&#169; Copyright 2020</p>
-      <ul class="footer-list">
+      <ul class="footer-list list">
         <li class="footer-item">
           <a
-            class="footer-link"
+            class="footer-link link"
             target="_blank"
             rel="noopener noreferrer"
             href="https://instagram.com"
@@ -222,7 +240,7 @@
         </li>
         <li class="footer-item">
           <a
-            class="footer-link"
+            class="footer-link link"
             target="_blank"
             rel="noopener noreferrer"
             href="https://yuotube.com"

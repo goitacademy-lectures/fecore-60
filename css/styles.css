@@ -1,0 +1,130 @@
+:root {
+  /* fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* text colors */
+  --main-txt-cl: #303030;
+  --accent-txt-cl: #ff6c00;
+  --btn-txt-cl: #ffffff;
+
+  /* bg colors */
+  --light-bg-cl: #f7f7f7;
+  --dark-bg-cl: #191c26;
+
+  /* others */
+}
+
+body {
+  font-family: var(--main-font);
+  color: var(--main-txt-cl);
+}
+
+/* reset styles */
+.link {
+  text-decoration: none;
+  color: currentColor;
+}
+.list {
+  list-style: none;
+}
+/* base styles */
+.uppertitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.uppertitle-mode-light {
+  color: #303030;
+}
+
+.uppertitle-mode-dark {
+  color: rgba(157, 164, 189, 0.6);
+}
+.main-title {
+  font-family: var(--secondary-font);
+  font-size: 72px;
+  line-height: calc(85 / 72);
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.section-title {
+  font-family: var(--secondary-font);
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
+.section-title-mode-light {
+  color: #303030;
+}
+.section-title-mode-dark {
+  color: #ffffff;
+}
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn:hover,
+.btn:focus {
+  color: var(--btn-txt-cl);
+  background-color: var(--accent-txt-cl);
+}
+.btn-mode-light {
+  color: var(--main-txt-cl);
+}
+.btn-mode-dark {
+  color: var(--btn-txt-cl);
+}
+
+/**
+  |============================
+  | Header section
+  |============================
+*/
+.header {
+  background-color: var(--dark-bg-cl);
+}
+.header-link,
+.header-phone {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.header-link:hover,
+.header-link:focus,
+.header-phone:hover,
+.header-phone:focus {
+  color: var(--accent-txt-cl);
+}
+.header-link-current {
+  color: var(--accent-txt-cl);
+}
+
+/**
+  |============================
+  | Hero section
+  |============================
+*/
+.hero {
+  background-color: var(--dark-bg-cl);
+}
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+}
+.hero-link:hover,
+.hero-link:focus {
+  color: var(--accent-txt-cl);
+}
