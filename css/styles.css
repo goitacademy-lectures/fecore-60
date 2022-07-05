@@ -1,130 +1,166 @@
-:root {
-  /* fonts */
-  --main-font: 'Open Sans', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
-
-  /* text colors */
-  --main-txt-cl: #303030;
-  --accent-txt-cl: #ff6c00;
-  --btn-txt-cl: #ffffff;
-
-  /* bg colors */
-  --light-bg-cl: #f7f7f7;
-  --dark-bg-cl: #191c26;
-
-  /* others */
+/* html {
+  box-sizing: border-box;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+} */
 
 body {
-  font-family: var(--main-font);
-  color: var(--main-txt-cl);
+  font-family: sans-serif;
 }
-
-/* reset styles */
-.link {
+/**
+  |============================
+  | Частковий ресет стилей браузера start
+  |============================
+*/
+a {
   text-decoration: none;
   color: currentColor;
 }
-.list {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
   list-style: none;
-}
-/* base styles */
-.uppertitle {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-.uppertitle-mode-light {
-  color: #303030;
+  padding: 0;
+  margin: 0;
 }
 
-.uppertitle-mode-dark {
-  color: rgba(157, 164, 189, 0.6);
-}
-.main-title {
-  font-family: var(--secondary-font);
-  font-size: 72px;
-  line-height: calc(85 / 72);
-  letter-spacing: 0.05em;
-  color: #ffffff;
-}
-.section-title {
-  font-family: var(--secondary-font);
-  font-size: 42px;
-  line-height: calc(49 / 42);
-  letter-spacing: 0.05em;
-}
-.section-title-mode-light {
-  color: #303030;
-}
-.section-title-mode-dark {
-  color: #ffffff;
-}
-.btn {
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(16 / 12);
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  background-color: transparent;
-  cursor: pointer;
-}
-.btn:hover,
-.btn:focus {
-  color: var(--btn-txt-cl);
-  background-color: var(--accent-txt-cl);
-}
-.btn-mode-light {
-  color: var(--main-txt-cl);
-}
-.btn-mode-dark {
-  color: var(--btn-txt-cl);
+/* Частковий ресет стилей браузера end */
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  outline: 1px dashed red;
 }
 
-/**
-  |============================
-  | Header section
-  |============================
+.section {
+  /* width: 800px; */
+
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  background-color: slateblue;
+}
+
+.text {
+  width: 400px;
+
+  margin: 0 auto;
+
+  /* height: 400px; */
+  /* padding: 40px; */
+  /* padding-top: 20px;
+  padding-right: 30px;
+  padding-bottom: 100px;
+  padding-left: 0; */
+
+  padding: 20px;
+
+  margin-bottom: 50px;
+
+  /* border: 5px dotted red; */
+  /* border-top: 10px solid red;
+  border-right: 5px dotted blueviolet;
+  border-bottom: 20px solid transparent;
+  border-left: 15px dashed lightsalmon;
+
+  border-radius: 20px;
+  border-top-right-radius: 100px;
+
+  border-radius: 50%; */
+
+  background-color: lightblue;
+  color: darkblue;
+}
+
+.text-2 {
+  /* margin-top: 150px; */
+}
+
+/* Принцип застосування маржинів на елементах:
+
+- у більшості випадків потрібно рухатися за потоком документа і застосовувати
+
+margin-right / margin-bottom
+
+
 */
-.header {
-  background-color: var(--dark-bg-cl);
-}
-.header-link,
-.header-phone {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: calc(16 / 12);
-  letter-spacing: 0.1em;
-  color: #ffffff;
-}
-.header-link:hover,
-.header-link:focus,
-.header-phone:hover,
-.header-phone:focus {
-  color: var(--accent-txt-cl);
-}
-.header-link-current {
-  color: var(--accent-txt-cl);
+
+.section-1 {
+  padding: 20px 0;
 }
 
-/**
-  |============================
-  | Hero section
-  |============================
-*/
-.hero {
-  background-color: var(--dark-bg-cl);
+.button {
+  /* display: none; */
 }
-.hero-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: calc(15 / 11);
-  letter-spacing: 0.2em;
+
+/*
+Правильне приховування елементів на сторінці
+Для усіх браузерів включаючи старі версії */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
-.hero-link:hover,
-.hero-link:focus {
-  color: var(--accent-txt-cl);
+
+.link {
+  display: block;
+  background-color: tomato;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-size: 2em;
+}
+
+.link:first-child {
+  background-color: teal;
+  color: white;
+}
+
+.link:last-child {
+  margin-bottom: 0;
+}
+
+/* .link:not(:last-child) {
+  margin-bottom: 20px;
+} */
+
+.link:nth-child(2n) {
+  background-color: blueviolet;
+}
+.link:nth-child(2n + 1) {
+  background-color: lightgreen;
+}
+.link:nth-last-child(n + 5) {
+  background-color: lightgrey;
 }
