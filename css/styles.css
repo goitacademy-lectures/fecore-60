@@ -13,6 +13,8 @@
   --dark-bg-cl: #191c26;
 
   /* others */
+  --indent: 30px;
+  --items: 3;
 }
 
 body {
@@ -21,15 +23,67 @@ body {
 }
 
 /* reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+img {
+  display: block;
+}
 .link {
   text-decoration: none;
   color: currentColor;
 }
 .list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+/**
+  |============================
+  | Card set
+  |============================
+*/
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+
+  /* на той випадок, коли відступи різні */
+  /* row-gap: var(--indent-horisontal);
+  column-gap: var(--indent-vertical); */
+}
+
+.card-set-item {
+  flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
 /* base styles */
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
+}
+
 .uppertitle {
+  margin-bottom: 20px;
+
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
@@ -57,12 +111,28 @@ body {
   letter-spacing: 0.05em;
 }
 .section-title-mode-light {
+  margin-bottom: 20px;
   color: #303030;
 }
 .section-title-mode-dark {
+  margin-bottom: 44px;
   color: #ffffff;
 }
+
+.section-subtitle {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #555555;
+}
 .btn {
+  max-width: 200px;
+  min-width: 160px;
+  min-height: 40px;
+  padding: 11px 19px;
+
   font-family: inherit;
   font-weight: 600;
   font-size: 12px;
@@ -70,6 +140,9 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   background-color: transparent;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
   cursor: pointer;
 }
 .btn:hover,
@@ -92,8 +165,37 @@ body {
 .header {
   background-color: var(--dark-bg-cl);
 }
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 71px;
+}
+
+.header-nav {
+  margin-right: auto;
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
+}
+
+/* .header-item {
+  margin-right: 40px;
+}
+
+.header-item:last-child {
+  margin-right: 0;
+} */
+
 .header-link,
 .header-phone {
+  padding-top: 52px;
+  padding-bottom: 52px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
@@ -108,6 +210,10 @@ body {
 }
 .header-link-current {
   color: var(--accent-txt-cl);
+}
+
+.header-phone {
+  margin-right: 40px;
 }
 
 /**
@@ -127,4 +233,266 @@ body {
 .hero-link:hover,
 .hero-link:focus {
   color: var(--accent-txt-cl);
+}
+
+.hero-desc {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+/**
+  |============================
+  | About section
+  |============================
+*/
+
+.about-container {
+  display: flex;
+  /* gap: 64px; */
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about-right-side {
+  margin-left: 64px;
+  flex-basis: 500px;
+}
+
+.about-desc {
+  margin-bottom: 40px;
+
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+/**
+  |============================
+  | Price section
+  |============================
+*/
+.price {
+  background-color: var(--dark-bg-cl);
+}
+
+.price-list {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.price-item {
+  flex-basis: 50%;
+  padding: 30px 40px;
+}
+
+.price-item:nth-child(1) {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.price-item:nth-child(2) {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.price-inner-item {
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.price-inner-item:last-child {
+  margin-bottom: 0;
+}
+
+/* альтернативний запис */
+/* .price-inner-item:not(:last-child) {
+  margin-bottom: 20px;
+} */
+
+.price-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+  |============================
+  | Benefits section
+  |============================
+*/
+.benefits-container {
+  display: flex;
+}
+.benefits-group {
+  flex-basis: 500px;
+  margin-left: auto;
+}
+
+.benefits-list {
+  width: 370px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+
+.benefits-item {
+  width: 170px;
+  min-height: 133px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+.benefits-item:nth-child(2n + 1) {
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.benefits-quantity {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 57px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: #303030;
+}
+
+.benefits-quantity sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ff6c00;
+}
+.benefits-desc {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+
+  color: #303030;
+}
+/**
+  |============================
+  | Team section
+  |============================
+*/
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+
+  /* можна керувати відстанню між елементами окремо по вертикалі і горизонталі */
+  /* row-gap: 30px;
+  column-gap: 50px; */
+
+  /* мінус метода у тому, що при встановленні фону, він починає випадати за контейнер */
+  /* margin: -15px; */
+
+  /* проблема у масштабуванні, коли потрібно додати в сітку елементи  */
+  /* justify-content: space-between; */
+}
+
+.team-item {
+  /* height: 400px; */
+
+  flex-basis: calc((100% - 30px * 4) / 5);
+
+  /* формула розрахунку розміру елемента винесена на загальні класи card-set та card-set-item ⬆ */
+  /* flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
+
+  /* Застарілий, але робочий підхід встановлення сітки через маржини на дітях та від'ємнний маржин на батьківському елементі */
+  /* margin: 15px; */
+}
+
+.team-wrapper {
+  /* border: 1px solid salmon;
+  border-top: none; */
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.team-subtitle {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+.team-desc {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}
+/**
+  |============================
+  | Portfolio section
+  |============================
+*/
+.portfolio-list {
+  --items: 4;
+}
+
+/**
+  |============================
+  | Contacts section
+  |============================
+*/
+.contacts {
+  background-color: #191c26;
+}
+
+.contacts-address {
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.contacts-schedule {
+  color: #ffffff;
+}
+
+.contacts-time {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+/**
+  |============================
+  | Footer section
+  |============================
+*/
+.footer-copyright {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: #9da4bd;
+}
+
+.footer-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+  color: #303030;
 }
