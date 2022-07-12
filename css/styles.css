@@ -20,6 +20,11 @@
 body {
   font-family: var(--main-font);
   color: var(--main-txt-cl);
+
+  /* background-image: url(https://media.istockphoto.com/vectors/vector-seamless-geometric-pattern-background-vector-id542708040);
+
+  background-repeat: repeat;
+  background-size: 200px; */
 }
 
 /* reset styles */
@@ -83,6 +88,9 @@ img {
 
 .uppertitle {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 
   font-weight: 600;
   font-size: 11px;
@@ -90,13 +98,30 @@ img {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+.uppertitle::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+}
+
 .uppertitle-mode-light {
   color: #303030;
+}
+
+.uppertitle-mode-light::before {
+  background-color: #303030;
 }
 
 .uppertitle-mode-dark {
   color: rgba(157, 164, 189, 0.6);
 }
+
+.uppertitle-mode-dark::before {
+  background-color: rgba(157, 164, 189, 0.6);
+}
+
 .main-title {
   font-family: var(--secondary-font);
   font-size: 72px;
@@ -212,6 +237,17 @@ img {
   color: var(--accent-txt-cl);
 }
 
+.header-link-current::after {
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  border-radius: 4px;
+  background-color: #ff6c00;
+}
+
 .header-phone {
   margin-right: 40px;
 }
@@ -222,7 +258,17 @@ img {
   |============================
 */
 .hero {
-  background-color: var(--dark-bg-cl);
+  outline: 1px solid red;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 680px;
+  /* background-color: var(--dark-bg-cl); */
+
+  background-image: url(../images/hero/hero-bg.jpg),
+    linear-gradient(to right, rgb(255, 255, 255) 155px, rgba(25, 28, 38, 0.2) 155px);
+  background-repeat: no-repeat;
+  background-position: top right, center;
 }
 .hero-link {
   font-weight: 600;
@@ -277,7 +323,15 @@ img {
   |============================
 */
 .price {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--dark-bg-cl);
+  background-image: url(../images/price/price-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .price-list {
@@ -291,10 +345,10 @@ img {
 }
 
 .price-item:nth-child(1) {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
 .price-item:nth-child(2) {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .price-inner-item {
@@ -348,6 +402,8 @@ img {
   padding: 20px;
   background-color: #f7f7f7;
   text-align: center;
+
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
 }
 
 .benefits-item:nth-child(2n + 1) {
@@ -356,6 +412,9 @@ img {
 }
 
 .benefits-quantity {
+  display: flex;
+  justify-content: center;
+
   font-weight: 700;
   font-size: 42px;
   line-height: 57px;
@@ -365,7 +424,9 @@ img {
   color: #303030;
 }
 
-.benefits-quantity sup {
+.benefits-quantity::after {
+  content: '\002B';
+
   font-weight: 600;
   font-size: 16px;
   line-height: 22px;
@@ -373,6 +434,16 @@ img {
 
   color: #ff6c00;
 }
+
+/* .benefits-quantity sup {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+
+  color: #ff6c00;
+} */
+
 .benefits-desc {
   font-weight: 600;
   font-size: 11px;
@@ -386,38 +457,20 @@ img {
   | Team section
   |============================
 */
+.team {
+  background-color: #f7f7f7;
+}
 .team-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
-
-  /* можна керувати відстанню між елементами окремо по вертикалі і горизонталі */
-  /* row-gap: 30px;
-  column-gap: 50px; */
-
-  /* мінус метода у тому, що при встановленні фону, він починає випадати за контейнер */
-  /* margin: -15px; */
-
-  /* проблема у масштабуванні, коли потрібно додати в сітку елементи  */
-  /* justify-content: space-between; */
 }
 
 .team-item {
-  /* height: 400px; */
-
   flex-basis: calc((100% - 30px * 4) / 5);
-
-  /* формула розрахунку розміру елемента винесена на загальні класи card-set та card-set-item ⬆ */
-  /* flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
-
-  /* Застарілий, але робочий підхід встановлення сітки через маржини на дітях та від'ємнний маржин на батьківському елементі */
-  /* margin: 15px; */
 }
 
 .team-wrapper {
-  /* border: 1px solid salmon;
-  border-top: none; */
-
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 5px;
@@ -455,7 +508,27 @@ img {
   |============================
 */
 .contacts {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: #191c26;
+
+  background-image: url(../images/contacts/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: top 0 left calc(50% + 328px);
+}
+
+.contatcs-container {
+  display: flex;
+}
+
+.contacts-left-side,
+.contacts-group {
+  flex-basis: 50%;
+}
+.contacts-group {
+  padding-left: 100px;
 }
 
 .contacts-address {
