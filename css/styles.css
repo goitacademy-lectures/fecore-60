@@ -386,38 +386,20 @@ img {
   | Team section
   |============================
 */
+.team {
+  background-color: #f7f7f7;
+}
 .team-list {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
-
-  /* можна керувати відстанню між елементами окремо по вертикалі і горизонталі */
-  /* row-gap: 30px;
-  column-gap: 50px; */
-
-  /* мінус метода у тому, що при встановленні фону, він починає випадати за контейнер */
-  /* margin: -15px; */
-
-  /* проблема у масштабуванні, коли потрібно додати в сітку елементи  */
-  /* justify-content: space-between; */
 }
 
 .team-item {
-  /* height: 400px; */
-
   flex-basis: calc((100% - 30px * 4) / 5);
-
-  /* формула розрахунку розміру елемента винесена на загальні класи card-set та card-set-item ⬆ */
-  /* flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items)); */
-
-  /* Застарілий, але робочий підхід встановлення сітки через маржини на дітях та від'ємнний маржин на батьківському елементі */
-  /* margin: 15px; */
 }
 
 .team-wrapper {
-  /* border: 1px solid salmon;
-  border-top: none; */
-
   padding-top: 30px;
   padding-bottom: 30px;
   padding-left: 5px;
