@@ -20,11 +20,6 @@
 body {
   font-family: var(--main-font);
   color: var(--main-txt-cl);
-
-  /* background-image: url(https://media.istockphoto.com/vectors/vector-seamless-geometric-pattern-background-vector-id542708040);
-
-  background-repeat: repeat;
-  background-size: 200px; */
 }
 
 /* reset styles */
@@ -59,10 +54,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
-
-  /* на той випадок, коли відступи різні */
-  /* row-gap: var(--indent-horisontal);
-  column-gap: var(--indent-vertical); */
 }
 
 .card-set-item {
@@ -81,9 +72,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  /* outline: 2px solid red;
-  outline-offset: -2px; */
 }
 
 .uppertitle {
@@ -208,14 +196,6 @@ img {
   gap: 40px;
 }
 
-/* .header-item {
-  margin-right: 40px;
-}
-
-.header-item:last-child {
-  margin-right: 0;
-} */
-
 .header-link,
 .header-phone {
   padding-top: 52px;
@@ -263,7 +243,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   height: 680px;
-  /* background-color: var(--dark-bg-cl); */
 
   background-image: url(../images/hero/hero-bg.jpg),
     linear-gradient(to right, rgb(255, 255, 255) 155px, rgba(25, 28, 38, 0.2) 155px);
@@ -364,11 +343,6 @@ img {
   margin-bottom: 0;
 }
 
-/* альтернативний запис */
-/* .price-inner-item:not(:last-child) {
-  margin-bottom: 20px;
-} */
-
 .price-btn {
   display: block;
   margin-left: auto;
@@ -435,15 +409,6 @@ img {
   color: #ff6c00;
 }
 
-/* .benefits-quantity sup {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
-
-  color: #ff6c00;
-} */
-
 .benefits-desc {
   font-weight: 600;
   font-size: 11px;
@@ -487,6 +452,8 @@ img {
   color: #303030;
 }
 .team-desc {
+  margin-bottom: 30px;
+
   font-size: 14px;
   line-height: calc(19 / 14);
   text-align: center;
@@ -568,4 +535,60 @@ img {
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
   color: #303030;
+}
+
+/**
+  |============================
+  | Socials icons
+  |============================
+*/
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  color: #303030;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  color: #ff6c00;
+}
+
+.socials-icon {
+  fill: currentColor;
+}
+
+/* спосіб з вказанням fill для іконки */
+/* .socials-link:hover {
+  background-color: lightblue;
+}
+.socials-link:hover .socials-icon {
+  fill: #ff6c00;
+} */
+
+/**
+  |============================
+  | Two color for icon
+  |============================
+*/
+.icon {
+  --color2: blueviolet;
+  --color3: orange;
+}
+
+.icon:hover {
+  --color2: #000;
+  --color3: tomato;
 }
