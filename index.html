@@ -22,6 +22,12 @@
       referrerpolicy="no-referrer"
     />
     <!-- Normalize end -->
+    <!-- Animate.css start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Animate.css end -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
@@ -55,7 +61,11 @@
           </ul>
         </nav>
         <a class="header-phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="header-btn btn btn-mode-dark" type="button" data-modal-open>
+        <button
+          class="header-btn btn btn-mode-dark animate__animated animate__bounce animate__delay-3s"
+          type="button"
+          data-modal-open
+        >
           онлайн-запись
         </button>
       </div>
@@ -417,6 +427,12 @@
           <ul class="portfolio-list card-set list">
             <li class="portfolio-item card-set-item">
               <img src="./images/portfolio/gallery-1.jpg" alt="Изображение" class="portfolio-img" />
+              <div class="overlay">
+                <p class="overlay-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minima,
+                  accusantium debitis modi suscipit totam?
+                </p>
+              </div>
             </li>
             <li class="portfolio-item card-set-item">
               <img src="./images/portfolio/gallery-2.jpg" alt="Изображение" class="portfolio-img" />
