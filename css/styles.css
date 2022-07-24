@@ -15,11 +15,17 @@
   /* others */
   --indent: 30px;
   --items: 3;
+  --anim-fast: 300ms ease-in-out;
+  --anim-slow: 600ms ease-out;
 }
 
 body {
   font-family: var(--main-font);
   color: var(--main-txt-cl);
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 /* reset styles */
@@ -111,12 +117,33 @@ img {
 }
 
 .main-title {
+  margin-bottom: 20px;
+
   font-family: var(--secondary-font);
   font-size: 72px;
   line-height: calc(85 / 72);
   letter-spacing: 0.05em;
   color: #ffffff;
+
+  animation: fade-in 800ms ease 500ms backwards alternate;
+  transform-origin: left center;
 }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.2);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(0px) scale(0.2);
+  }
+
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
 .section-title {
   font-family: var(--secondary-font);
   font-size: 42px;
@@ -157,6 +184,22 @@ img {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   cursor: pointer;
+
+  /* значення властивості для якої буде здійснено плавний перехід за заданий час
+    якщо не встановити властивості переходу, то застосується all */
+  transition-property: color, background-color;
+
+  /* час за який буде здійсенено перехід від одного значення до іншого */
+  transition-duration: 400ms;
+
+  /* функція розподілення часу пропорційно до швидкості переходу стану */
+  transition-timing-function: ease-in-out;
+
+  /* затримка перед початком переходу */
+  transition-delay: 0s;
+
+  /* скорочений запис */
+  transition: color var(--anim-fast), background-color var(--anim-fast);
 }
 .btn:hover,
 .btn:focus {
@@ -176,8 +219,20 @@ img {
   |============================
 */
 .header {
-  background-color: var(--dark-bg-cl);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  transition: background-color var(--anim-fast), backdrop-filter var(--anim-fast);
 }
+
+.header.no-transparency {
+  background-color: rgba(25, 28, 38, 0.5);
+  backdrop-filter: blur(4px);
+}
+
 .header-container {
   display: flex;
   align-items: center;
@@ -206,6 +261,8 @@ img {
   line-height: calc(16 / 12);
   letter-spacing: 0.1em;
   color: #ffffff;
+
+  transition: color var(--anim-fast);
 }
 .header-link:hover,
 .header-link:focus,
@@ -214,11 +271,15 @@ img {
   color: var(--accent-txt-cl);
 }
 .header-link-current {
+  position: relative;
   color: var(--accent-txt-cl);
 }
 
 .header-link-current::after {
   content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 0;
 
   display: block;
   width: 100%;
@@ -238,22 +299,60 @@ img {
   |============================
 */
 .hero {
-  outline: 1px solid red;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  height: 680px;
+  /* height: 680px; */
 
-  background-image: url(../images/hero/hero-bg.jpg),
-    linear-gradient(to right, rgb(255, 255, 255) 155px, rgba(25, 28, 38, 0.2) 155px);
+  background-image: url(../images/hero/hero-bg.jpg);
   background-repeat: no-repeat;
-  background-position: top right, center;
+  background-position: right center;
+  background-size: contain;
 }
+
+.hero-container {
+  display: flex;
+}
+
+.hero-left-side {
+  display: flex;
+  align-items: flex-end;
+  flex-basis: 100px;
+  max-width: 100px;
+}
+
+.hero-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  transform: rotate(-90deg) translateY(27px);
+  transform-origin: top left;
+}
+
+.hero-list::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+}
+
+.hero-right-side {
+  position: relative;
+  flex-grow: 1;
+  padding-top: 272px;
+  padding-bottom: 206px;
+  padding-left: 100px;
+}
+
 .hero-link {
   font-weight: 600;
   font-size: 11px;
   line-height: calc(15 / 11);
   letter-spacing: 0.2em;
+
+  transition: color var(--anim-fast);
 }
 .hero-link:hover,
 .hero-link:focus {
@@ -261,12 +360,70 @@ img {
 }
 
 .hero-desc {
-  font-weight: 400;
+  width: 500px;
   font-size: 18px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+/* slider elements */
+.slider-controls {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.slider-btn {
+  width: 60px;
+  padding: 0;
+  padding-bottom: 8px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+
+  color: white;
+  text-align: right;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+
+.slider-btn.disabled {
+  text-align: left;
+  color: rgba(157, 164, 189, 0.6);
+  border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+}
+
+.pagination {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.pagination-item {
+  margin-left: auto;
+  margin-bottom: 12px;
+  width: 8px;
+  height: 2px;
+  background-color: #9da4bd;
+}
+
+.pagination-item:last-child {
+  margin-bottom: 0;
+}
+
+.pagination-item.active {
+  width: 18px;
+  background-color: #fff;
+}
+
 /**
   |============================
   | About section
@@ -316,18 +473,30 @@ img {
 .price-list {
   display: flex;
   margin-bottom: 50px;
+
+  perspective: 1000px;
 }
 
 .price-item {
   flex-basis: 50%;
   padding: 30px 40px;
+
+  transition: transform var(--anim-slow);
 }
 
 .price-item:nth-child(1) {
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  transform-origin: left center;
+  transform: rotateY(15deg);
 }
 .price-item:nth-child(2) {
   background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  transform-origin: right center;
+  transform: rotateY(-15deg);
+}
+
+.price-item:hover {
+  transform: rotateY(0);
 }
 
 .price-inner-item {
@@ -469,6 +638,51 @@ img {
   --items: 4;
 }
 
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow var(--anim-fast);
+}
+
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 40px 5px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+
+  transition: transform 500ms ease-in-out;
+}
+
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.overlay-text {
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: #fff;
+  text-align: center;
+  user-select: none;
+}
+
 /**
   |============================
   | Contacts section
@@ -559,11 +773,16 @@ img {
   color: #303030;
   background-color: #ffffff;
   border-radius: 50%;
+
+  /* transition: color var(--anim-fast), box-shadow var(--anim-fast); */
+  transition: 300ms ease;
 }
 
 .socials-link:hover,
 .socials-link:focus {
   color: #ff6c00;
+  width: 100px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
 }
 
 .socials-icon {
@@ -574,21 +793,82 @@ img {
 /* .socials-link:hover {
   background-color: lightblue;
 }
+
+.socials-icon {
+  transition: fill var(--anim-fast);
+}
 .socials-link:hover .socials-icon {
   fill: #ff6c00;
 } */
 
 /**
   |============================
-  | Two color for icon
+  | Modal window
   |============================
 */
-.icon {
-  --color2: blueviolet;
-  --color3: orange;
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /*
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  /* властивості за змовчуванням */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+
+  transition: opacity 600ms ease-out, visibility 600ms ease-out;
 }
 
-.icon:hover {
-  --color2: #000;
-  --color3: tomato;
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+
+  width: 400px;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+
+  opacity: 1;
+  transition: transform 400ms ease-in-out 200ms, opacity 400ms ease-in-out 200ms;
+}
+
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.3) rotate(1turn);
+}
+
+.modal-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: 1px solid #ff6c00;
+  background-color: transparent;
+  cursor: pointer;
 }

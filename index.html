@@ -22,12 +22,18 @@
       referrerpolicy="no-referrer"
     />
     <!-- Normalize end -->
+    <!-- Animate.css start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Animate.css end -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body>
+  <body data-page>
     <!-- Header section -->
-    <header class="header">
+    <header class="header" data-header>
       <div class="container header-container">
         <a class="logo link" href="">
           <img
@@ -55,54 +61,64 @@
           </ul>
         </nav>
         <a class="header-phone link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="header-btn btn btn-mode-dark" type="button">онлайн-запись</button>
+        <button
+          class="header-btn btn btn-mode-dark animate__animated animate__bounce animate__delay-3s"
+          type="button"
+          data-modal-open
+        >
+          онлайн-запись
+        </button>
       </div>
     </header>
     <!-- Main section -->
     <main>
       <!-- Hero section -->
       <section class="hero">
-        <div class="container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://instagram.com"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                class="hero-link link"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://yuotube.com"
-                >Youtube</a
-              >
-            </li>
-          </ul>
-          <p class="hero-uppertitle uppertitle uppertitle-mode-dark" lang="en">
-            A hair salon for men in Kyiv
-          </p>
-          <h1 class="main-title" lang="en">BarberShop</h1>
-          <p class="hero-desc">
-            Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
-          </p>
-          <div class="pagination">
-            <div class="pagination-item"></div>
-            <div class="pagination-item"></div>
-            <div class="pagination-item"></div>
+        <div class="container hero-container">
+          <div class="hero-left-side">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://instagram.com"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  class="hero-link link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://yuotube.com"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
           </div>
-          <ul class="slider-controls list">
-            <li class="slider-item">
-              <button class="slider-btn" type="button">Назад</button>
-            </li>
-            <li class="slider-item">
-              <button class="slider-btn" type="button">Вперед</button>
-            </li>
-          </ul>
+          <div class="hero-right-side">
+            <p class="hero-uppertitle uppertitle uppertitle-mode-dark" lang="en">
+              A hair salon for men in Kyiv
+            </p>
+            <h1 class="main-title" lang="en">BarberShop</h1>
+            <p class="hero-desc">
+              Мы эксперты в модных мужских стрижках. Работаем&nbsp;быстро, осторожно и со вкусом.
+            </p>
+            <div class="pagination">
+              <div class="pagination-item active"></div>
+              <div class="pagination-item"></div>
+              <div class="pagination-item"></div>
+            </div>
+            <ul class="slider-controls list">
+              <li class="slider-item">
+                <button class="slider-btn disabled" type="button">Назад</button>
+              </li>
+              <li class="slider-item">
+                <button class="slider-btn" type="button">Вперед</button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <!-- About section -->
@@ -411,6 +427,12 @@
           <ul class="portfolio-list card-set list">
             <li class="portfolio-item card-set-item">
               <img src="./images/portfolio/gallery-1.jpg" alt="Изображение" class="portfolio-img" />
+              <div class="overlay">
+                <p class="overlay-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minima,
+                  accusantium debitis modi suscipit totam?
+                </p>
+              </div>
             </li>
             <li class="portfolio-item card-set-item">
               <img src="./images/portfolio/gallery-2.jpg" alt="Изображение" class="portfolio-img" />
@@ -473,48 +495,6 @@
           </div>
         </div>
       </section>
-      <!-- Two colors -->
-      <section class="section">
-        <div class="container">
-          <ul class="list">
-            <li class="item">
-              <div class="thumb">
-                <svg width="70" height="70" class="icon">
-                  <use href="./images/icons.svg#antenna"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="item">
-              <div class="thumb">
-                <svg width="70" height="70" class="icon">
-                  <use href="./images/icons.svg#astronaut"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="item">
-              <div class="thumb">
-                <svg width="70" height="70" class="icon">
-                  <use href="./images/icons.svg#clock"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="item">
-              <div class="thumb">
-                <svg width="70" height="70" class="icon">
-                  <use href="./images/icons.svg#diagram"></use>
-                </svg>
-              </div>
-            </li>
-            <li class="item">
-              <div class="thumb">
-                <svg width="70" height="70" class="icon">
-                  <use href="./images/icons.svg#spinner3"></use>
-                </svg>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
     </main>
     <!-- Footer section -->
     <footer class="footer">
@@ -542,5 +522,19 @@
         </ul>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-btn-icon" width="20" height="20">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
