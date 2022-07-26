@@ -524,13 +524,127 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
-        <button class="modal-btn" data-modal-close>
+        <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="20" height="20">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <!-- <form class="modal-form" name="modal-form" autocomplete="off">
+          <div>
+            <label for="user-name">Name</label>
+            <input type="text" id="user-name" name="user-name" placeholder="Alex Black" />
+          </div>
+
+          <label class="modal-form-group">
+            <span class="modal-form-label">Phone</span>
+            <input
+              class="modal-form-input"
+              type="tel"
+              name="user-phone"
+              placeholder="+38 (099) 123-45-67"
+            />
+          </label>
+
+          <label class="modal-form-group">
+            <span class="modal-form-label">Email</span>
+            <input
+              class="modal-form-input"
+              type="email"
+              name="user-email"
+              placeholder="example@mail.com"
+            />
+          </label>
+
+          <label class="modal-form-group">
+            <span class="modal-form-label">Password</span>
+            <input
+              class="modal-form-input"
+              type="password"
+              name="user-pass"
+              placeholder="123-(*&(&-Qasada"
+              minlength="3"
+              maxlength="16"
+            />
+          </label>
+
+          <div>
+            <p>Choose payment way</p>
+            <label>
+              <span>Visa</span>
+              <input type="radio" name="user-payment" value="visa" />
+            </label>
+            <label>
+              <span>Mastercard</span>
+              <input type="radio" name="user-payment" value="mastercard" checked />
+            </label>
+          </div>
+
+          <label>
+            <input type="checkbox" name="user-policy" value="privacy-policy" />
+            <span>I agree to <a href="">Privacy policy</a></span>
+          </label>
+          <label>
+            <input type="checkbox" name="user-cookies" value="cookies" />
+            <span>I agree to Cookies</span>
+          </label>
+          <label>
+            <input type="checkbox" name="user-license" value="license" />
+            <span>I agree to License</span>
+          </label>
+
+          <input type="number" name="user-quantity" min="0" max="100" step="0.1" />
+          <textarea name="" id="" rows="10"></textarea>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form> -->
+
+        <form class="form">
+          <strong class="form-title">Залиште свої дані, ми вам передзвонимо</strong>
+
+          <label class="form-group">
+            <span class="form-label">Телефон</span>
+            <input class="form-input" type="tel" name="user-phone" />
+            <svg class="form-icon" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </label>
+
+          <label class="form-group">
+            <span class="form-label">Телефон</span>
+            <input class="form-input" type="tel" name="user-phone" />
+            <svg class="form-icon" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </label>
+
+          <label class="form-group">
+            <span class="form-label">Телефон</span>
+            <input class="form-input" type="tel" name="user-phone" />
+            <svg class="form-icon" width="20" height="20">
+              <use href=""></use>
+            </svg>
+          </label>
+
+          <label class="form-group">
+            <span class="form-label">Телефон</span>
+            <textarea class="form-input" type="tel" name="user-phone"></textarea>
+          </label>
+
+          <label>
+            <input type="checkbox" name="" id="" />
+            <span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>
+          </label>
+
+          <button type="submit">
+            Підписатися
+            <svg width="" height="">
+              <use href=""></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
 
