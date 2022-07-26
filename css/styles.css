@@ -872,3 +872,29 @@ img {
   background-color: transparent;
   cursor: pointer;
 }
+
+/**
+  |============================
+  | Modal form
+  |============================
+*/
+
+.modal {
+  padding: 30px;
+}
+
+.modal button {
+  display: block;
+  margin-top: 20px;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.modal-form-label {
+  /* display: block; */
+}
