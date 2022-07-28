@@ -452,44 +452,52 @@
           <div class="contacts-left-side">
             <h2 class="section-title section-title-mode-dark">Онлайн-запись</h2>
             <form class="contact-form" name="contact-form">
-              <label class="contact-form-group">
-                <input
-                  class="contact-form-input"
-                  type="text"
-                  name="user-name"
-                  placeholder="Antony Black"
-                />
-                <span class="contact-form-label">Имя*</span>
-                <svg class="contact-form-icon" width="20" height="20">
-                  <use class="contact-form-warning" href="./images/icons.svg"></use>
-                  <use class="contact-form-error" href="./images/icons.svg"></use>
-                </svg>
-                <span></span>
-              </label>
-              <label class="contact-form-group">
-                <input
-                  class="contact-form-input"
-                  type="tel"
-                  name="user-phone"
-                  placeholder="+38 099 123-45-67"
-                />
-                <span class="contact-form-label">Телефон*</span>
-                <svg class="contact-form-icon" width="20" height="20">
-                  <use class="contact-form-warning" href="./images/icons.svg"></use>
-                  <use class="contact-form-error" href="./images/icons.svg"></use>
-                </svg>
-                <span></span>
-              </label>
+              <div class="contact-form-wrap">
+                <label class="contact-form-group">
+                  <input
+                    class="contact-form-input"
+                    type="text"
+                    name="user-name"
+                    placeholder="Antony Black"
+                    required
+                    minlength="3"
+                  />
+                  <span class="contact-form-label">Имя*</span>
+                  <svg class="contact-form-icon" width="20" height="20">
+                    <use class="contact-form-warning" href="./images/icons.svg#icon-warning"></use>
+                    <use class="contact-form-success" href="./images/icons.svg#icon-success"></use>
+                  </svg>
+                  <span class="contact-form-notfication">Укажите минимум 3 символа</span>
+                </label>
+                <label class="contact-form-group">
+                  <input
+                    class="contact-form-input"
+                    type="tel"
+                    name="user-phone"
+                    placeholder="+38 099 123-45-67"
+                    required
+                    maxlength="12"
+                  />
+                  <span class="contact-form-label">Телефон*</span>
+                  <svg class="contact-form-icon" width="20" height="20">
+                    <use class="contact-form-warning" href="./images/icons.svg#icon-warning"></use>
+                    <use class="contact-form-success" href="./images/icons.svg#icon-success"></use>
+                  </svg>
+                  <span class="contact-form-notfication"
+                    >Укажите номер в формате +38 099 123-45-67</span
+                  >
+                </label>
+              </div>
               <label class="contact-form-group">
                 <textarea
                   class="contact-form-message"
                   name="user-message"
                   rows="5"
-                  placeholder=""
+                  placeholder=" "
                 ></textarea>
                 <span class="contact-form-label">сообщение</span>
               </label>
-              <button class="contact-form-btn" type="submit">отправить</button>
+              <button class="contact-form-btn btn btn-mode-dark" type="submit">отправить</button>
             </form>
           </div>
           <div class="contacts-group">
@@ -518,7 +526,10 @@
 
             <p class="contacts-schedule uppertitle uppertitle-mode-dark">время работы</p>
             <p class="contacts-time">
-              Ежедневно с <time datatime="09:00">9:00</time> до <time datatime="22:00">22:00</time>
+              Ежедневно с
+              <time datatime="09:00">9:00</time>
+              до
+              <time datatime="22:00">22:00</time>
             </p>
           </div>
         </div>
@@ -526,7 +537,7 @@
     </main>
     <!-- Footer section -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer-container">
         <p class="footer-copyright">&#169; Copyright 2020</p>
         <ul class="footer-list list">
           <li class="footer-item">
@@ -552,7 +563,7 @@
     </footer>
 
     <!-- Modal window -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
           <svg class="modal-btn-icon" width="20" height="20">
@@ -564,34 +575,43 @@
           <strong class="register-form-title">Оставьте свои данные, мы вам перезвоним</strong>
           <div class="register-form-group" role="group">
             <label class="register-form-wrap">
-              <input class="register-form-input" type="text" />
               <span class="register-form-label">Имя</span>
+              <input class="register-form-input" type="text" />
               <svg class="register-form-icon" width="20" height="20">
-                <use href="./images/icons.svg#"></use>
+                <use href="./images/icons.svg#icon-profile"></use>
               </svg>
             </label>
             <label class="register-form-wrap">
-              <input class="register-form-input" type="tel" />
               <span class="register-form-label">Телефон</span>
+              <input class="register-form-input" type="tel" />
               <svg class="register-form-icon" width="20" height="20">
-                <use href="./images/icons.svg#"></use>
+                <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </label>
             <label class="register-form-wrap">
-              <input class="register-form-input" type="email" />
               <span class="register-form-label">Почта</span>
+              <input class="register-form-input" type="email" />
               <svg class="register-form-icon" width="20" height="20">
-                <use href="./images/icons.svg#"></use>
+                <use href="./images/icons.svg#icon-mail"></use>
               </svg>
             </label>
             <label class="register-form-wrap">
-              <textarea class="register-form-message" name="" rows="5"></textarea>
-              <span class="">Комментарий</span>
+              <span class="register-form-label">Комментарий</span>
+              <textarea
+                class="register-form-message"
+                name=""
+                rows="5"
+                placeholder="Введите свое сообщение"
+              ></textarea>
             </label>
           </div>
 
           <label class="register-form-agreement">
-            <input class="" type="checkbox" name="agreement" />
+            <input class="register-checkbox visuaaly-hidden" type="checkbox" name="agreement" />
+            <svg class="register-icon" width="20" height="20">
+              <use class="register-icon-uncheck" href="./images/icons.svg#icon-uncheck"></use>
+              <use class="register-icon-check" href="./images/icons.svg#icon-check"></use>
+            </svg>
             <span class="register-form-agreement-text">
               Соглашаюсь с рассылкой и принимаю
               <a class="register-form-agreement-link" href="">Условия договора</a>
@@ -599,8 +619,9 @@
           </label>
 
           <button class="register-form-btn" type="submit">
-            <svg width="20" height="20">
-              <use href=""></use>
+            Отправить
+            <svg class="register-form-btn-icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-plane"></use>
             </svg>
           </button>
         </form>
