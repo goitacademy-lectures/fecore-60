@@ -514,6 +514,9 @@ img {
 
 .price-inner-item {
   margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
 
   font-size: 18px;
   line-height: calc(30 / 18);
@@ -523,6 +526,18 @@ img {
 
 .price-inner-item:last-child {
   margin-bottom: 0;
+}
+
+.price-inner-item::before {
+  content: '';
+
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+}
+
+.price-inner-desc:first-child {
+  order: -1;
 }
 
 .price-btn {
@@ -726,6 +741,8 @@ img {
 }
 
 .contacts-address {
+  margin-bottom: 66px;
+
   font-style: normal;
   font-size: 18px;
   line-height: 1.67;
@@ -987,7 +1004,6 @@ img {
 .socials-link:hover,
 .socials-link:focus {
   color: #ff6c00;
-  width: 100px;
 }
 
 .socials-icon {
