@@ -28,7 +28,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <!-- Animate.css end -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+
+    <!-- Видаляємо це посилання після рефакторингу стилей -->
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
   </head>
 
   <body data-page>
@@ -122,7 +125,7 @@
         </div>
       </section>
       <!-- About section -->
-      <section class="about section" id="about">
+      <section class="about" id="about">
         <div class="container about__container">
           <ul class="about-list list">
             <li class="about-list__item">
@@ -161,15 +164,15 @@
         </div>
       </section>
       <!-- Price section -->
-      <section class="price section" id="price">
+      <section class="price" id="price">
         <div class="container">
           <p class="price__uppertitle uppertitle uppertitle--mode-dark">
             Проведи время в компании лучших мастеров
           </p>
           <h2 class="section-title section-title--mode-dark">Услуги и цены</h2>
-          <ul class="price__list list">
+          <ul class="price__list">
             <li class="price__item">
-              <ul class="price__inner-list list">
+              <ul class="price__inner-list">
                 <li class="price__inner-item">
                   <span class="price__inner-desc">Мужская стрижка</span>
                   <span class="price__inner-desc">от 300 грн.</span>
@@ -534,16 +537,28 @@
                     href="https://goo.gl/maps/46dUfQWJNFQiRmkx6"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >ул. Васильковая, 7А Киев, 08132</a
+                  >
+                    <svg width="24" height="24">
+                      <use href="./images/icons.svg#map-pin"></use>
+                    </svg>
+                    ул. Васильковая, 7А Киев, 08132</a
                   >
                 </li>
                 <li class="contacts-item">
-                  <a class="contacts-link link" href="tel:+380441111111">+38 044 111 11 11</a>
+                  <a class="contacts-link link" href="tel:+380441111111">
+                    <svg width="24" height="24">
+                      <use href="./images/icons.svg#phone"></use>
+                    </svg>
+                    +38 044 111 11 11
+                  </a>
                 </li>
                 <li class="contacts-item">
-                  <a class="contacts-link link" href="mailto:barbershop@email.com"
-                    >barbershop@email.com</a
-                  >
+                  <a class="contacts-link link" href="mailto:barbershop@email.com">
+                    <svg width="24" height="24">
+                      <use href="./images/icons.svg#mail"></use>
+                    </svg>
+                    barbershop@email.com
+                  </a>
                 </li>
               </ul>
             </address>

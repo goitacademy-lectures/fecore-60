@@ -1,0 +1,167 @@
+.contact-form {
+  width: 560px;
+}
+.contact-form-wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 44px;
+}
+
+.contact-form-group {
+  position: relative;
+  display: block;
+}
+
+.contact-form-group:first-child {
+  flex-basis: 270px;
+}
+.contact-form-group:last-child {
+  flex-basis: 260px;
+}
+
+.contact-form-input {
+  width: 100%;
+  height: 24px;
+  padding-right: 30px;
+
+  font-size: 12px;
+  color: #ffffff;
+
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: transparent;
+  background-color: transparent;
+
+  transition: border-color var(--anim-fast);
+}
+
+.contact-form-input:focus,
+.contact-form-input:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.contact-form-input:required:valid:not(:placeholder-shown) {
+  border-color: rgb(31, 109, 0);
+}
+.contact-form-input:required:invalid:not(:placeholder-shown) {
+  border-color: rgb(255, 217, 0);
+}
+
+.contact-form-input::placeholder {
+  color: transparent;
+  transition: color var(--anim-fast);
+}
+
+.contact-form-input:focus::placeholder {
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.contact-form-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  transform-origin: top left;
+  transition: transform var(--anim-fast), color var(--anim-fast);
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.contact-form-input:focus + .contact-form-label,
+.contact-form-input:not(:placeholder-shown) + .contact-form-label,
+.contact-form-message:focus + .contact-form-label,
+.contact-form-message:not(:placeholder-shown) + .contact-form-label {
+  color: #ffffff;
+  transform: translateY(-15px) scale(0.8);
+}
+
+.contact-form-icon {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.contact-form-warning,
+.contact-form-success {
+  opacity: 0;
+  transform: scale(0.4);
+  transform-origin: center;
+
+  transition: opacity var(--anim-fast), transform var(--anim-fast);
+}
+
+.contact-form-warning {
+  fill: rgb(255, 217, 0);
+}
+
+.contact-form-input:invalid:required:not(:placeholder-shown)
+  ~ .contact-form-icon
+  .contact-form-warning {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.contact-form-success {
+  fill: rgb(31, 109, 0);
+}
+
+.contact-form-input:valid:required:not(:placeholder-shown)
+  ~ .contact-form-icon
+  .contact-form-success {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.contact-form-notfication {
+  display: inline-block;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 15px) scale(0.3);
+  transform-origin: center;
+  opacity: 0;
+  transition: opacity var(--anim-fast), transform var(--anim-fast);
+
+  font-size: 9px;
+  color: rgb(255, 217, 0);
+  text-align: center;
+}
+
+.contact-form-input:invalid:required:not(:placeholder-shown) ~ .contact-form-notfication {
+  opacity: 1;
+  transform: translate(-50%, 15px) scale(1);
+}
+
+.contact-form-message {
+  width: 100%;
+  height: 76px;
+
+  font-size: 12px;
+  color: #ffffff;
+
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  outline: transparent;
+  background-color: transparent;
+  resize: none;
+
+  transition: border-color var(--anim-fast);
+}
+
+.contact-form-message:focus,
+.contact-form-message:not(:placeholder-shown) {
+  border-color: #ffffff;
+}
+
+.contact-form-btn {
+  margin-top: 44px;
+}

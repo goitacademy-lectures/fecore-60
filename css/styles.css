@@ -1,35 +1,35 @@
-:root {
-  /* fonts */
+/* :root {
+  fonts
   --main-font: 'Open Sans', sans-serif;
   --secondary-font: 'Raleway', sans-serif;
 
-  /* text colors */
+  text colors
   --main-txt-cl: #303030;
   --accent-txt-cl: #ff6c00;
   --btn-txt-cl: #ffffff;
 
-  /* bg colors */
+  bg colors
   --light-bg-cl: #f7f7f7;
   --dark-bg-cl: #191c26;
 
-  /* others */
+  others
   --indent: 30px;
   --items: 3;
   --anim-fast: 300ms ease-in-out;
   --anim-slow: 600ms ease-out;
-}
+} */
 
-body {
+/* body {
   font-family: var(--main-font);
   color: var(--main-txt-cl);
 }
 
 .no-scroll {
   overflow: hidden;
-}
+} */
 
 /* reset styles */
-h1,
+/* h1,
 h2,
 h3,
 h4,
@@ -49,9 +49,9 @@ img {
   list-style: none;
   padding: 0;
   margin: 0;
-}
+} */
 
-.visuaaly-hidden {
+/* .visuaaly-hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -62,14 +62,14 @@ img {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-}
+} */
 
 /**
   |============================
   | Card set
   |============================
 */
-.card-set {
+/* .card-set {
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
@@ -77,23 +77,23 @@ img {
 
 .card-set-item {
   flex-basis: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-}
+} */
 
 /* base styles */
-.section {
+/* .section {
   padding-top: 130px;
   padding-bottom: 130px;
-}
+} */
 
-.container {
+/* .container {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
-.uppertitle {
+/* .uppertitle {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -134,9 +134,9 @@ img {
 
   animation: fade-in 800ms ease 500ms backwards alternate;
   transform-origin: left center;
-}
+} */
 
-@keyframes fade-in {
+/* @keyframes fade-in {
   0% {
     opacity: 0;
     transform: translateX(-200px) scale(0.2);
@@ -149,9 +149,9 @@ img {
   100% {
     transform: translateX(0px) scale(1);
   }
-}
+} */
 
-.section-title {
+/* .section-title {
   font-family: var(--secondary-font);
   font-size: 42px;
   line-height: calc(49 / 42);
@@ -173,8 +173,9 @@ img {
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: #555555;
-}
-.btn {
+} */
+
+/* .btn {
   max-width: 200px;
   min-width: 160px;
   min-height: 40px;
@@ -192,20 +193,6 @@ img {
   border-radius: 25px;
   cursor: pointer;
 
-  /* значення властивості для якої буде здійснено плавний перехід за заданий час
-    якщо не встановити властивості переходу, то застосується all */
-  transition-property: color, background-color;
-
-  /* час за який буде здійсенено перехід від одного значення до іншого */
-  transition-duration: 400ms;
-
-  /* функція розподілення часу пропорційно до швидкості переходу стану */
-  transition-timing-function: ease-in-out;
-
-  /* затримка перед початком переходу */
-  transition-delay: 0s;
-
-  /* скорочений запис */
   transition: color var(--anim-fast), background-color var(--anim-fast);
 }
 .btn:hover,
@@ -218,14 +205,14 @@ img {
 }
 .btn--mode-dark {
   color: var(--btn-txt-cl);
-}
+} */
 
 /**
   |============================
   | Header section
   |============================
 */
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
@@ -247,9 +234,9 @@ img {
 
 .header__logo {
   margin-right: 71px;
-}
+} */
 
-.nav {
+/* .nav {
   margin-right: auto;
 }
 .nav__list {
@@ -288,9 +275,9 @@ img {
 
   border-radius: 4px;
   background-color: #ff6c00;
-}
+} */
 
-.header__phone {
+/* .header__phone {
   margin-right: 40px;
   padding-top: 52px;
   padding-bottom: 52px;
@@ -307,18 +294,17 @@ img {
 .header__phone:hover,
 .header__phone:focus {
   color: var(--accent-txt-cl);
-}
+} */
 
 /**
   |============================
   | Hero section
   |============================
 */
-.hero {
+/* .hero {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  /* height: 680px; */
 
   background-image: url(../images/hero/hero-bg.jpg);
   background-repeat: no-repeat;
@@ -381,9 +367,10 @@ img {
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: #9da4bd;
-}
+} */
+
 /* slider elements */
-.slider-controls {
+/* .slider-controls {
   position: absolute;
   right: 0;
   bottom: 40px;
@@ -438,7 +425,7 @@ img {
 .pagination-item.active {
   width: 18px;
   background-color: #fff;
-}
+} */
 
 /**
   |============================
@@ -446,9 +433,8 @@ img {
   |============================
 */
 
-.about__container {
+/* .about__container {
   display: flex;
-  /* gap: 64px; */
 }
 
 .about-list {
@@ -472,13 +458,13 @@ img {
   line-height: calc(26 / 14);
   letter-spacing: 0.02em;
   color: #555555;
-}
+} */
 /**
   |============================
   | Price section
   |============================
 */
-.price {
+/* .price {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -555,14 +541,14 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 /**
   |============================
   | Benefits section
   |============================
 */
-.benefits__container {
+/* .benefits__container {
   display: flex;
 }
 
@@ -629,13 +615,14 @@ img {
 
 .benefits__uppertitle {
   margin-bottom: 20px;
-}
+} */
 /**
   |============================
   | Team section
   |============================
 */
-.team {
+/* .team {
+    @include section;
   background-color: #f7f7f7;
 }
 .team-list {
@@ -672,13 +659,13 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
-}
+} */
 /**
   |============================
   | Portfolio section
   |============================
 */
-.portfolio-list {
+/* .portfolio-list {
   --items: 4;
 }
 
@@ -725,14 +712,14 @@ img {
   color: #fff;
   text-align: center;
   user-select: none;
-}
+} */
 
 /**
   |============================
   | Contacts section
   |============================
 */
-.contacts {
+/* .contacts {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
@@ -775,10 +762,10 @@ img {
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
-}
+} */
 
 /* contacts form */
-.contact-form {
+/* .contact-form {
   width: 560px;
 }
 .contact-form-wrap {
@@ -944,7 +931,7 @@ img {
 
 .contact-form-btn {
   margin-top: 44px;
-}
+} */
 /**
   |============================
   | Footer section
@@ -996,7 +983,7 @@ img {
   | Socials icons
   |============================
 */
-.socials {
+/* .socials {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1024,14 +1011,14 @@ img {
 
 .socials-icon {
   fill: currentColor;
-}
+} */
 
 /**
   |============================
   | Modal window
   |============================
 */
-.backdrop {
+/* .backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -1042,7 +1029,6 @@ img {
 
   background-color: rgba(0, 0, 0, 0.2);
 
-  /* властивості за змовчуванням */
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
@@ -1094,14 +1080,14 @@ img {
   border: 1px solid #ff6c00;
   background-color: transparent;
   cursor: pointer;
-}
+} */
 
 /**
   |============================
   | Modal form
   |============================
 */
-.register-form {
+/* .register-form {
   text-align: center;
 }
 
@@ -1209,4 +1195,4 @@ img {
 
 .register-form-btn-icon {
   fill: #ff6c00;
-}
+} */
