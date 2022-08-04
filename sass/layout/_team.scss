@@ -1,0 +1,39 @@
+.team {
+  @include section;
+  background-color: #f7f7f7;
+}
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+
+.team-item {
+  flex-basis: calc((100% - 30px * 4) / 5);
+}
+
+.team-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.team-subtitle {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+.team-desc {
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #ff6c00;
+}

@@ -1,0 +1,20 @@
+:root {
+  /* fonts */
+  --main-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* text colors */
+  --main-txt-cl: #303030;
+  --accent-txt-cl: #ff6c00;
+  --btn-txt-cl: #ffffff;
+
+  /* bg colors */
+  --light-bg-cl: #f7f7f7;
+  --dark-bg-cl: #191c26;
+
+  /* others */
+  --indent: 30px;
+  --items: 3;
+  --anim-fast: 300ms ease-in-out;
+  --anim-slow: 600ms ease-out;
+}

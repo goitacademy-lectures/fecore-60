@@ -1,0 +1,30 @@
+.about {
+  @include section;
+}
+
+.about__container {
+  display: flex;
+}
+
+.about-list {
+  display: flex;
+  gap: 30px;
+}
+
+.about__right-side {
+  margin-left: 64px;
+  flex-basis: 500px;
+}
+
+.about__uppertitle {
+  margin-bottom: 20px;
+}
+
+.about__desc {
+  margin-bottom: 40px;
+
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
+  color: #555555;
+}

@@ -1,0 +1,34 @@
+.btn {
+  max-width: 200px;
+  min-width: 160px;
+  min-height: 40px;
+  padding: 11px 19px;
+
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  background-color: transparent;
+
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  cursor: pointer;
+
+  transition: color var(--anim-fast), background-color var(--anim-fast);
+
+  &:hover,
+  &:focus {
+    color: var(--btn-txt-cl);
+    background-color: var(--accent-txt-cl);
+  }
+
+  &--mode-light {
+    color: var(--main-txt-cl);
+  }
+
+  &--mode-dark {
+    color: var(--btn-txt-cl);
+  }
+}

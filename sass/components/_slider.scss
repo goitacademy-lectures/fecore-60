@@ -1,0 +1,56 @@
+.slider-controls {
+  position: absolute;
+  right: 0;
+  bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.slider-btn {
+  width: 60px;
+  padding: 0;
+  padding-bottom: 8px;
+
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+
+  color: white;
+  text-align: right;
+
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+
+  &.disabled {
+    text-align: left;
+    color: rgba(157, 164, 189, 0.6);
+    border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+  }
+}
+
+.pagination {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.pagination-item {
+  margin-left: auto;
+  margin-bottom: 12px;
+  width: 8px;
+  height: 2px;
+  background-color: #9da4bd;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &.active {
+    width: 18px;
+    background-color: #fff;
+  }
+}

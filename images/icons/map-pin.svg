@@ -1,4 +1,52 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M20 10.3636C20 16.0909 12 21 12 21C12 21 4 16.0909 4 10.3636C4 6.29681 7.58172 3 12 3C16.4183 3 20 6.29681 20 10.3636V10.3636Z" stroke="#9DA4BD" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14Z" stroke="#9DA4BD" stroke-linecap="round" stroke-linejoin="round"/>
+<svg
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M20 10.3636C20 16.0909 12 21 12 21C12 21 4 16.0909 4 10.3636C4 6.29681 7.58172 3 12 3C16.4183 3 20 6.29681 20 10.3636V10.3636Z"
+    stroke="#9DA4BD"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14Z"
+    stroke="#9DA4BD"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
 </svg>
+
+
+
+<symbol
+  id="map-pin"
+  viewBox="0 0 32 32"
+>
+  <path
+    fill="none"
+    stroke="#9da4bd"
+    style="stroke: var(--color1, #9da4bd)"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    stroke-miterlimit="4"
+    stroke-width="1.3333"
+    d="M26.667 13.818c0 7.636-10.667 14.182-10.667 14.182s-10.667-6.545-10.667-14.182c0-5.422 4.776-9.818 10.667-9.818s10.667 4.396 10.667 9.818v0z"
+  ></path>
+  <path
+    fill="none"
+    stroke="#9da4bd"
+    style="stroke: var(--color1, #9da4bd)"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+    stroke-miterlimit="4"
+    stroke-width="1.3333"
+    d="M16 18.667c2.209 0 4-1.791 4-4s-1.791-4-4-4-4 1.791-4 4c0 2.209 1.791 4 4 4z"
+  ></path>
+</symbol>

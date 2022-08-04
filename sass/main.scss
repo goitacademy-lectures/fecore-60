@@ -1,0 +1,37 @@
+// utils styles
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/animations';
+@import './utils/placeholders';
+@import './utils/mixins';
+
+// base styles
+@import './base/base';
+@import './base/reset';
+
+// components styles
+@import './components/card-set';
+@import './components/container';
+
+// замінили на mixin
+// @import './components/section';
+
+@import './components/titles';
+@import './components/buttons';
+@import './components/slider';
+@import './components/socials';
+@import './components/modal-window';
+@import './components/modal-form';
+@import './components/contacts-form';
+
+// layout styles
+@import './layout/header';
+@import './layout/nav';
+@import './layout/hero';
+@import './layout/about';
+@import './layout/price';
+@import './layout/benefits';
+@import './layout/team';
+@import './layout/portfolio';
+@import './layout/contacts';
+@import './layout/footer';
