@@ -95,6 +95,12 @@ p {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .link {
@@ -1386,4 +1392,38 @@ img {
   line-height: 1.3636363636;
   letter-spacing: 0.2em;
   color: #303030;
+}
+
+.label-agreement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+  gap: 7px;
+}
+.label-agreement__text {
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+  color: #757575;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-underline-position: under;
+}
+.label-agreement__text--link {
+  color: var(--acent-color);
+}
+
+.icon-check {
+  opacity: 0;
+  -webkit-transition: opasity 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opasity 2000ms cubic-bezier(0.4, 0, 0.2, 1);
 }/*# sourceMappingURL=main.css.map */
