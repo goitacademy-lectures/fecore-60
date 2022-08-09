@@ -1,14 +1,27 @@
+.main-title {
+  margin-bottom: 20px;
+
+  font-family: var(--secondary-font);
+  color: #ffffff;
+  @include fonts(72px, 85px, 700, 0.05em);
+
+  // font-size: 72px;
+  // line-height: calc(85 / 72);
+  // letter-spacing: 0.05em;
+
+  animation: fade-in 800ms ease 500ms backwards alternate;
+  transform-origin: left center;
+}
+
 .uppertitle {
   display: flex;
   align-items: center;
   gap: 20px;
 
-  // font-weight: 600;
-  // font-size: 11px;
-  // line-height: calc(15 / 11);
-  // letter-spacing: 0.1em;
-  @include fonts(11px, 15px);
-
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 
   &::before {
@@ -35,26 +48,16 @@
   }
 }
 
-.main-title {
-  margin-bottom: 20px;
-
-  font-family: var(--secondary-font);
-  color: #ffffff;
-  @include fonts(72px, 85px, 700, 0.05em);
-
-  // font-size: 72px;
-  // line-height: calc(85 / 72);
-  // letter-spacing: 0.05em;
-
-  animation: fade-in 800ms ease 500ms backwards alternate;
-  transform-origin: left center;
-}
-
 .section-title {
   font-family: var(--secondary-font);
-  font-size: 42px;
+  font-size: 28px;
+
   line-height: calc(49 / 42);
   letter-spacing: 0.05em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 42px;
+  }
 
   &--mode-light {
     margin-bottom: 20px;
@@ -70,8 +73,12 @@
 .section-subtitle {
   margin-bottom: 20px;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: calc(30 / 18);
   letter-spacing: 0.02em;
   color: #555555;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 }

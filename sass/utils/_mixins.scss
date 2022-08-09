@@ -1,8 +1,18 @@
 @import './decimals';
 
-@mixin section($padding: 130px) {
+@mixin section($padding: 84px) {
   padding-top: $padding;
   padding-bottom: $padding;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
 }
 
 @mixin fonts($fs, $lh, $fw: 400, $ls: 0.02em) {
