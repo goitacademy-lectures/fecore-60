@@ -43,7 +43,7 @@
             <use href="./images/icons.svg#logo"></use>
           </svg>
         </a>
-        <button class="menu-btn" type="button">
+        <button class="menu-btn" type="button" data-menu-open>
           <svg width="40" height="40">
             <use href="./images/icons.svg#burger-menu"></use>
           </svg>
@@ -168,7 +168,7 @@
         </div>
       </section>
       <!-- Price section -->
-      <!-- <section class="price" id="price">
+      <section class="price" id="price">
         <div class="container">
           <p class="price__uppertitle uppertitle uppertitle--mode-dark">
             Проведи время в компании лучших мастеров
@@ -218,7 +218,7 @@
           </ul>
           <button class="price__btn btn btn--mode-dark" type="button">онлайн-запись</button>
         </div>
-      </section> -->
+      </section>
       <!-- Benefits section -->
       <!-- <section class="benefits section">
         <div class="container benefits__container">
@@ -253,14 +253,56 @@
         </div>
       </section> -->
       <!-- Team section -->
-      <!-- <section class="team section">
+      <section class="team section">
         <div class="container team-container">
           <p class="uppertitle uppertitle--mode-light">для настоящих ценителей атмосферы</p>
           <h2 class="section-title section-title--mode-light">Наши мастера</h2>
 
           <ul class="team-list card-set list">
             <li class="team-item card-set-item">
-              <img src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346" />
+              <!-- Дексриптор x -->
+              <!-- <img
+                srcset="./images/team/img-1@1x_sm.jpg 1x, ./images/team/img-1@2x_sm.jpg 2x"
+                src="/images/team/img-1@1x_sm.jpg"
+                alt="John Smith"
+                width="450"
+                height="346"
+              /> -->
+              <!-- Дексриптор w -->
+              <!-- <img
+                srcset="
+                  ./images/team/w/img-1-370.png 370w,
+                  ./images/team/w/img-1-418.jpg 418w,
+                  ./images/team/w/img-1-450.jpg 450w,
+                  ./images/team/w/img-1-740.jpg 740w,
+                  ./images/team/w/img-1-836.jpg 836w,
+                  ./images/team/w/img-1-900.jpg 900w
+                "
+                sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, 100vw"
+                src="./images/team/w/img-1-370.png"
+                alt="John Smith"
+                width="450"
+                height="346"
+              /> -->
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-1@1x_lg.jpg 1x, ./images/team/img-1@2x_lg.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-1@1x_md.jpg 1x, ./images/team/img-1@2x_md.jpg 2x"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-1@1x_sm.jpg 1x, ./images/team/img-1@2x_sm.jpg 2x"
+                />
+
+                <img class="portfolio-img" src="./images/team/img-1@1x_sm.jpg" alt="John Smith" />
+              </picture>
+
               <div class="team-wrapper">
                 <h3 class="team-subtitle" lang="en">John Smith</h3>
                 <p class="team-desc" lang="en">Extreme Barber</p>
@@ -321,7 +363,24 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-1@1x_lg.jpg 1x, ./images/team/img-1@2x_lg.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-1@1x_md.jpg 1x, ./images/team/img-1@2x_md.jpg 2x"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-1@1x_sm.jpg 1x, ./images/team/img-1@2x_sm.jpg 2x"
+                />
+
+                <img class="portfolio-img" src="./images/team/img-1@1x_sm.jpg" alt="Michele Doe" />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-subtitle" lang="en">Michele Doe</h3>
                 <p class="team-desc" lang="en">Extreme Barber</p>
@@ -382,7 +441,24 @@
               </div>
             </li>
             <li class="team-item card-set-item">
-              <img src="./images/team/img-3.jpg" alt="Alan Black" width="370" height="346" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/img-3@1x_lg.jpg 1x, ./images/team/img-3@2x_lg.jpg 2x"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-3@1x_md.jpg 1x, ./images/team/img-3@2x_md.jpg 2x"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/img-3@1x_sm.jpg 1x, ./images/team/img-3@2x_sm.jpg 2x"
+                />
+
+                <img class="portfolio-img" src="./images/team/img-3@1x_sm.jpg" alt="Alan Black" />
+              </picture>
               <div class="team-wrapper">
                 <h3 class="team-subtitle" lang="en">Alan Black</h3>
                 <p class="team-desc" lang="en">Extreme Barber</p>
@@ -444,9 +520,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Portfolio section -->
-      <!-- <section class="portfolio section">
+      <section class="portfolio section">
         <div class="container">
           <p class="portfolio__uppertitle uppertitle uppertitle--mode-light">
             На латинском языке “барба” означает “борода”
@@ -454,7 +530,63 @@
           <h2 hidden>Портфолио работ</h2>
           <ul class="portfolio-list card-set list">
             <li class="portfolio-item card-set-item">
-              <img src="./images/portfolio/gallery-1.jpg" alt="Изображение" class="portfolio-img" />
+              <!-- Тег picture -->
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-1_lg@1x.webp 1x,
+                    ./images/portfolio/img-1_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-1_lg@1x.jpg 1x,
+                    ./images/portfolio/img-1_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/portfolio/img-1_md@1x.webp 1x,
+                    ./images/portfolio/img-1_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/img-1@1x_sm.jpg 1x, ./images/portfolio/img-1_md@2x.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-1_sm@1x.webp 1x,
+                    ./images/portfolio/img-1_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-1_sm@1x.jpg 1x,
+                    ./images/portfolio/img-1_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- fallback -->
+                <img
+                  class="portfolio-img"
+                  src="./images/portfolio/img-1_sm@1x.jpg"
+                  alt="Изображение"
+                />
+              </picture>
               <div class="overlay">
                 <p class="overlay-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat minima,
@@ -463,17 +595,191 @@
               </div>
             </li>
             <li class="portfolio-item card-set-item">
-              <img src="./images/portfolio/gallery-2.jpg" alt="Изображение" class="portfolio-img" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-2_lg@1x.webp 1x,
+                    ./images/portfolio/img-2_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-2_lg@1x.jpg 1x,
+                    ./images/portfolio/img-2_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/portfolio/img-2_md@1x.webp 1x,
+                    ./images/portfolio/img-2_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/portfolio/img-2_md@1x.jpg 1x,
+                    ./images/portfolio/img-2_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-2_sm@1x.webp 1x,
+                    ./images/portfolio/img-2_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-2_sm@1x.jpg 1x,
+                    ./images/portfolio/img-2_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- fallback -->
+                <img
+                  class="portfolio-img"
+                  src="./images/portfolio/img-2_sm@1x.jpg"
+                  alt="Изображение"
+                />
+              </picture>
             </li>
             <li class="portfolio-item card-set-item">
-              <img src="./images/portfolio/gallery-3.jpg" alt="Изображение" class="portfolio-img" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-3_lg@1x.webp 1x,
+                    ./images/portfolio/img-3_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-3_lg@1x.jpg 1x,
+                    ./images/portfolio/img-3_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/portfolio/img-3_md@1x.webp 1x,
+                    ./images/portfolio/img-3_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/portfolio/img-3_md@1x.jpg 1x,
+                    ./images/portfolio/img-3_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-3_sm@1x.webp 1x,
+                    ./images/portfolio/img-3_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-3_sm@1x.jpg 1x,
+                    ./images/portfolio/img-3_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- fallback -->
+                <img
+                  class="portfolio-img"
+                  src="./images/portfolio/img-3_sm@1x.jpg"
+                  alt="Изображение"
+                />
+              </picture>
             </li>
             <li class="portfolio-item card-set-item">
-              <img src="./images/portfolio/gallery-4.jpg" alt="Изображение" class="portfolio-img" />
+              <picture>
+                <!-- desktop screen -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-4_lg@1x.webp 1x,
+                    ./images/portfolio/img-4_lg@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/portfolio/img-4_lg@1x.jpg 1x,
+                    ./images/portfolio/img-4_lg@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- tablet screen -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/portfolio/img-4_md@1x.webp 1x,
+                    ./images/portfolio/img-4_md@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/portfolio/img-4_md@1x.jpg 1x,
+                    ./images/portfolio/img-4_md@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- mobile screen -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-4_sm@1x.webp 1x,
+                    ./images/portfolio/img-4_sm@2x.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/portfolio/img-4_sm@1x.jpg 1x,
+                    ./images/portfolio/img-4_sm@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <!-- fallback -->
+                <img
+                  class="portfolio-img"
+                  src="./images/portfolio/img-4_sm@1x.jpg"
+                  alt="Изображение"
+                />
+              </picture>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- Contacts section -->
       <!-- <section class="contacts section" id="contacts">
         <div class="container contatcs-container">
@@ -669,8 +975,14 @@
     </div>
 
     <!-- Mobile menu -->
-    <div class="menu-overlay">
+    <div class="menu-overlay" data-menu>
       <div class="menu-container">
+        <button class="menu-btn" type="button" data-menu-close>
+          <svg class="menu-close-icon" width="40" height="40">
+            <use href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
+
         <ul class="mobile-nav list">
           <li class="mobile-nav-item">
             <a href="" class="mobile-link link">О нас</a>
@@ -707,5 +1019,6 @@
     </div>
     <script src="./js/header-scroll.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

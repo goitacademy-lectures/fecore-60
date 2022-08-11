@@ -6,6 +6,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
+
+  --items: 1;
+
+  @media screen and (min-width: 1200px) {
+    --items: 3;
+  }
 }
 
 .team-item {

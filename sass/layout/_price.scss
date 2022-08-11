@@ -6,10 +6,40 @@
   margin-right: auto;
 
   background-color: var(--dark-bg-cl);
-  background-image: url(../images/price/price-bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  // mobile screen
+  background-image: url('../images/price/img@1x_sm.png');
+  background-image: -webkit-image-set(url('../images/price/img@1x_sm.webp') 1x);
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('../images/price/img@2x_sm.png');
+    background-image: -webkit-image-set(url('../images/price/img@2x_sm.webp') 2x);
+  }
+
+  // tablet screen
+  @media screen and (min-width: 768px) {
+    background-image: url('../images/price/img@1x_md.png');
+    background-image: -webkit-image-set(url('../images/price/img@1x_md.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/price/img@2x_md.png');
+      background-image: -webkit-image-set(url('../images/price/img@2x_md.webp') 2x);
+    }
+  }
+
+  // desktop screen
+  @media screen and (min-width: 1200px) {
+    background-image: url('../images/price/img@1x_lg.png');
+    background-image: -webkit-image-set(url('../images/price/img@1x_lg.webp') 1x);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('../images/price/img@2x_lg.png');
+      background-image: -webkit-image-set(url('../images/price/img@2x_lg.webp') 2x);
+    }
+  }
 }
 
 .price__uppertitle {

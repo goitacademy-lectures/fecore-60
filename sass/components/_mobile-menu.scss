@@ -16,6 +16,12 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+
+  .menu-overlay & {
+    position: absolute;
+    top: 48px;
+    right: 30px;
+  }
 }
 
 .menu-overlay {
@@ -31,8 +37,20 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
 
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  transition: opacity var(--anim-fast), visibility var(--anim-fast);
+
   @media screen and (min-width: 768px) {
     display: none;
+  }
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: initial;
+    visibility: visible;
   }
 }
 
@@ -45,6 +63,13 @@
   height: 100%;
   background-color: #fff;
   padding: 118px 40px;
+
+  transform: translateX(100%);
+  transition: transform var(--anim-fast);
+
+  .menu-overlay.is-open & {
+    transform: translateX(0);
+  }
 }
 
 .mobile-nav {
