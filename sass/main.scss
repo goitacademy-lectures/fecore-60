@@ -23,6 +23,7 @@
 @import './components/modal-window';
 @import './components/modal-form';
 @import './components/contacts-form';
+@import './components/mobile-menu';
 
 // layout styles
 @import './layout/header';
@@ -35,3 +36,30 @@
 @import './layout/portfolio';
 @import './layout/contacts';
 @import './layout/footer';
+
+.label-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 7px;
+
+  &__text {
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+
+    color: #757575;
+
+    user-select: none;
+    text-underline-position: under;
+  }
+  &__text--link {
+    color: var(--acent-color);
+  }
+}
+
+.icon-check {
+  opacity: 0;
+  transition: opasity 2000ms cubic-bezier(0.4, 0, 0.2, 1);
+}

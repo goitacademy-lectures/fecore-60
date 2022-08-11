@@ -6,10 +6,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--indent);
+
+  --items: 1;
+
+  @media screen and (min-width: 1200px) {
+    --items: 3;
+  }
 }
 
 .team-item {
-  flex-basis: calc((100% - 30px * 4) / 5);
+  // flex-basis: calc((100% - 30px * 4) / 5);
 }
 
 .team-wrapper {

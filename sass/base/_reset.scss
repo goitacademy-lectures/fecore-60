@@ -7,13 +7,21 @@ h6,
 p {
   margin: 0;
 }
+
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
+
+  object-fit: cover;
+  object-position: center;
 }
+
 .link {
   text-decoration: none;
   color: currentColor;
 }
+
 .list {
   list-style: none;
   padding: 0;

@@ -1,10 +1,19 @@
 .nav {
-  margin-right: auto;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-right: auto;
+  }
 }
 
 .nav__list {
   display: flex;
-  gap: 40px;
+  gap: 24px;
+
+  @media screen and (min-width: 1200px) {
+    gap: 40px;
+  }
 }
 
 .nav__link {
