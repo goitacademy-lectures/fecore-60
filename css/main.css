@@ -1209,6 +1209,15 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-list__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -1485,6 +1494,20 @@ img {
     padding-top: 130px;
     padding-bottom: 130px;
   }
+}
+
+@media screen and (max-width: 1199px) {
+  .team__container {
+    max-width: 450px;
+  }
+}
+
+.team__uppertitle {
+  margin-bottom: 20px;
+}
+
+.team__title {
+  margin-bottom: 44px;
 }
 
 .team-list {

@@ -2,6 +2,21 @@
   @include section;
   background-color: #f7f7f7;
 }
+
+.team__container {
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+  }
+}
+
+.team__uppertitle {
+  margin-bottom: 20px;
+}
+
+.team__title {
+  margin-bottom: 44px;
+}
+
 .team-list {
   display: flex;
   flex-wrap: wrap;
@@ -12,10 +27,6 @@
   @media screen and (min-width: 1200px) {
     --items: 3;
   }
-}
-
-.team-item {
-  // flex-basis: calc((100% - 30px * 4) / 5);
 }
 
 .team-wrapper {

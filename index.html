@@ -32,6 +32,8 @@
 
     <!-- Видаляємо це посилання після рефакторингу стилей -->
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+
+    <script src="./js/apartment.js"></script>
   </head>
 
   <body data-page>
@@ -131,22 +133,42 @@
         <div class="container about__container">
           <ul class="about-list list">
             <li class="about-list__item">
-              <img
-                class="about-list__img"
-                src="./images/about/img-1.jpg"
-                alt="Бритье бороды"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/about-1_lg@1x.jpg 1x, ./images/about/about-1_lg@1x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/about-1_md@1x.jpg 1x, ./images/about/about-1_md@2x.jpg 2x"
+                />
+                <img
+                  class="about-list__img"
+                  src="./images/about/about-1_md@1x.jpg"
+                  alt="Бритье бороды"
+                  width="270"
+                  height="445"
+                />
+              </picture>
             </li>
             <li class="about-list__item">
-              <img
-                class="about-list__img"
-                src="./images/about/img-2.jpg"
-                alt="Бритье опасной бритвой"
-                width="270"
-                height="445"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/about/about-2_lg@1x.jpg 1x, ./images/about/about-2_lg@1x.jpg 2x"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/about/about-2_md@1x.jpg 1x, ./images/about/about-2_md@2x.jpg 2x"
+                />
+                <img
+                  class="about-list__img"
+                  src="./images/about/about-2_md@1x.jpg"
+                  alt="Бритье опасной бритвой"
+                  width="270"
+                  height="445"
+                />
+              </picture>
             </li>
           </ul>
           <div class="about__right-side">
@@ -254,9 +276,11 @@
       </section> -->
       <!-- Team section -->
       <section class="team section">
-        <div class="container team-container">
-          <p class="uppertitle uppertitle--mode-light">для настоящих ценителей атмосферы</p>
-          <h2 class="section-title section-title--mode-light">Наши мастера</h2>
+        <div class="container team__container">
+          <p class="team__uppertitle uppertitle uppertitle--mode-light">
+            для настоящих ценителей атмосферы
+          </p>
+          <h2 class="team__title section-title section-title--mode-light">Наши мастера</h2>
 
           <ul class="team-list card-set list">
             <li class="team-item card-set-item">
@@ -366,20 +390,20 @@
               <picture>
                 <source
                   media="(min-width: 1200px)"
-                  srcset="./images/team/img-1@1x_lg.jpg 1x, ./images/team/img-1@2x_lg.jpg 2x"
+                  srcset="./images/team/img-2@1x_lg.jpg 1x, ./images/team/img-2@2x_lg.jpg 2x"
                 />
 
                 <source
                   media="(min-width: 768px)"
-                  srcset="./images/team/img-1@1x_md.jpg 1x, ./images/team/img-1@2x_md.jpg 2x"
+                  srcset="./images/team/img-2@1x_md.jpg 1x, ./images/team/img-2@2x_md.jpg 2x"
                 />
 
                 <source
                   media="(max-width: 767px)"
-                  srcset="./images/team/img-1@1x_sm.jpg 1x, ./images/team/img-1@2x_sm.jpg 2x"
+                  srcset="./images/team/img-2@1x_sm.jpg 1x, ./images/team/img-2@2x_sm.jpg 2x"
                 />
 
-                <img class="portfolio-img" src="./images/team/img-1@1x_sm.jpg" alt="Michele Doe" />
+                <img class="portfolio-img" src="./images/team/img-2@1x_sm.jpg" alt="Michele Doe" />
               </picture>
               <div class="team-wrapper">
                 <h3 class="team-subtitle" lang="en">Michele Doe</h3>
